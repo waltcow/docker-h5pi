@@ -1,0 +1,12 @@
+h5pai:
+  container_name: 'H5pai'
+  image: fanvinga/docker-h5ai
+  ports:
+    - "80:80"
+    - "80:80/udp"
+  volumes:
+    - /root/share:/share
+    - /root/h5pi/options.json:/usr/share/h5ai/_h5ai/private/conf/options.json
+    - /root/h5pi/nginx.conf:/etc/nginx/nginx.conf
+    - /root/h5pi/htpasswd:/etc/nginx/.htpasswd
+
